@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Пашко Святослав">
+    <meta name="keywords" content="Предпринимательство, бизнес, ИП, Пашко, Святослав">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Пашко Святослав - Предприниматель и стартапер</title>
+
+    <style>
+        footer a { color: var(--primary-color); text-decoration: none; font-weight: bold; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Гений, миллиардер, плейбой, филантроп!</h1>
+            <p>Чем занимаются предприниматели в наши дни?</p>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#about" style="cursor: pointer;">Обо мне</a></li>
+                <li><a href="#ideas" style="cursor: pointer;">Идеи стартапов</a></li>
+                <li><a href="#metrics" style="cursor: pointer;">Метрики</a></li>
+                <li><a href="#contact" style="cursor: pointer;">Контакты</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <section id="about">
+            <aside>
+                <div>
+                    <h2>Ключевые ценности подхода к бизнесу.</h2>
+                    <p><b>Инновации: </b>Создание новых технологий и продуктов, которые привлекают клиентов.</p>
+                    <p><b>Устойчивое развитие: </b>Применение экологически чистых методов управления.</p>
+                    <p><b>Командная работа: </b>Укрепление взаимодействия между сотрудниками.</p>
+                </div>
+            </aside>
+
+            <div>
+                <div class="photo-wrapper">
+                    <img src="images/MyPhoto2.jpg" alt="ПашкоСвятославЕвгеньевич" style="float: left; margin-right: 15px; border-radius: 5px;" width="200" height="250">
+                    <div class="status-badge">TOP FORBES</div>
+                </div>
+                <p>Предприниматель из Томска, Пашко Святослав, вошел в первую 10-ку списка <a href="https://www.forbes.com/" style="cursor: pointer;"><b>Forbes</b></a>.</p>
+                <p>С каждым днем все больше людей пытаются открыть свое дело, но лишь единицы добиваются успеха.</p>
+                <p>Сегодня мы узнаем, на какие проекты стоит присмотреться!</p>
+            </div>
+            <div style="clear:left"></div>
+        </section>
+
+        <section id="ideas">
+            <div class="ideas-header">
+                <h2>Идеи стартапов, которые стоит реализовать</h2>
+                <div class="ideas-controls">
+                    <button id="theme-toggle" class="control-btn" type="button">🌙 Тёмная тема</button>
+                    <button id="toggle-ideas" class="control-btn" type="button">Скрыть идеи</button>
+                    <button id="delete-last" class="control-btn danger" type="button">Удалить последнюю</button>
+                </div>
+            </div>
+
+            <form id="idea-form" class="idea-form">
+                <input type="text" name="idea-title" placeholder="Название идеи" required>
+                <input type="text" name="idea-audience" placeholder="Целевая аудитория" required>
+                <input type="text" name="idea-metric" placeholder="Метрика (например, 5000 MAU)" required>
+                <button type="submit" id="add-idea" class="bait-btn">Добавить идею</button>
+            </form>
+
+            <div class="ideas-container" id="ideas-container"></div>
+        </section>
+
+        <section id="metrics">
+            <h2>Ключевые метрики (Dashboard)</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>MAU</h3>
+                    <p>Monthly Active Users (Активные пользователи)</p>
+                    <meter min="0" max="10000" value="8500" low="3000" high="7000" optimum="9000" title="8500 пользователей"></meter>
+                    <p class="metric-value">8,500 / 10,000</p>
+                    <div class="graph-placeholder" style="background: linear-gradient(to top right, #3498db, #2980b9);">График роста</div>
+                </div>
+                <div class="metric-card">
+                    <h3>LTV</h3>
+                    <p>Lifetime Value (Доход с клиента)</p>
+                    <meter min="0" max="100" value="75" low="30" high="80" optimum="90" title="$75"></meter>
+                    <p class="metric-value">$75</p>
+                    <div class="graph-placeholder" style="background: linear-gradient(to top right, #2ecc71, #27ae60);">Когортный анализ</div>
+                </div>
+                <div class="metric-card">
+                    <h3>CAC</h3>
+                    <p>Customer Acquisition Cost (Стоимость привлечения)</p>
+                    <meter min="0" max="50" value="15" low="10" high="40" optimum="5" title="$15"></meter>
+                    <p class="metric-value">$15</p>
+                    <div class="graph-placeholder" style="background: linear-gradient(to top right, #e74c3c, #c0392b);">Динамика затрат</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="form-title">
+                <h2>Оставьте свое мнение:</h2>
+            </div>
+            <form action="#" method="post" class="startup-form">
+                <input type="text" name="name" placeholder="Ваше имя" style="cursor: pointer;" required>
+                <input type="email" name="email" placeholder="Ваш Email" style="cursor: pointer;" required>
+                <textarea name="message" placeholder="Ваше сообщение" style="cursor: pointer;" required></textarea>
+                <button type="submit" class="bait-btn" style="cursor: pointer;">Отправить стартап-идею!</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>Copyright © 2026. <a href="#" style="cursor: pointer;">PashkoSvyat.com</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
